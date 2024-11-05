@@ -1,5 +1,7 @@
 'use client'
+
 import { Carousel } from "flowbite-react"
+
 let config = {
   "root": {
     "base": "relative h-full w-full rounded-none",
