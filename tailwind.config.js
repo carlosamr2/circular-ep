@@ -1,9 +1,10 @@
 const headlessuiPlugin = require('@headlessui/tailwindcss')
 const formsPlugin = require('@tailwindcss/forms')
+const flowbite = require("flowbite-react/tailwind")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}',flowbite.content()],
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -33,5 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [formsPlugin, headlessuiPlugin],
+  plugins: [formsPlugin, headlessuiPlugin, flowbite.plugin()],
 }

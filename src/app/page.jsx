@@ -7,19 +7,24 @@ import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
+import { CarouselBanner } from '@/components/CarouselBanner'
+import { Contact } from '@/components/Contact'
+import "../styles/globals.css"
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
-        <Hero />
+        {/* <Hero /> */}
+        <CarouselBanner />
         <PrimaryFeatures />
         <SecondaryFeatures />
         <CallToAction />
         <Testimonials />
         <Pricing />
         <Faqs />
+        <Contact />
       </main>
       <Footer />
     </>
