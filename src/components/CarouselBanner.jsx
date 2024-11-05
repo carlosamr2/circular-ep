@@ -1,7 +1,9 @@
 'use client'
 
+import Image from 'next/image'
 import { Carousel } from 'flowbite-react'
 import { motion } from 'framer-motion'
+import img from '@/images/background-call-to-action.jpg'
 
 let config = {
   root: {
@@ -40,26 +42,50 @@ export function CarouselBanner() {
   return (
     <div className="relative h-80 sm:h-[28rem] xl:h-[38rem]">
       <Carousel theme={config} indicators={false}>
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+        {/* <Image
+          src={img}
           alt="..."
-        />
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-          alt="..."
-        />
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-          alt="..."
-        />
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
-          alt="..."
-        />
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-          alt="..."
-        />
+        /> */}
+        <div className="relative h-full w-full">
+          <Image
+            src={'https://flowbite.com/docs/images/carousel/carousel-1.svg'}
+            alt="..."
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="relative h-full w-full">
+          <Image
+            src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+            alt="..."
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="relative h-full w-full">
+          <Image
+            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            alt="..."
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="relative h-full w-full">
+          <Image
+            src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
+            alt="..."
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="relative h-full w-full">
+          <Image
+            src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
+            alt="..."
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </Carousel>
       <div className="absolute top-0 z-50 h-full w-full">
         {/* <img
@@ -69,7 +95,12 @@ export function CarouselBanner() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "tween" , duration: 0.75, transition: "easeIn", delay: 0.5 }}
+            transition={{
+              type: 'tween',
+              duration: 0.75,
+              transition: 'easeIn',
+              delay: 0.5,
+            }}
             className="mx-auto my-auto max-w-7xl px-6 lg:px-8"
           >
             <div className="mx-auto max-w-2xl text-center">
